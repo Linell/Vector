@@ -2,18 +2,7 @@
 	Timothy Bonnette	
 		University of Southern Mississippi
 		Created - 4/9/12
-	
-	Edit Log: 4.9.12 @ 3:53PM
-			- set up the base. Did initial testing.
-			 @ 6:16PM
-			- made a dot product, magnitude, and projection
-			  functions. Results don't seem consistent though.
-		  4.12.12 @ 5:49
-			- implemented more operators. I may make a text file
-			  to help keep track of everything.
-			- worked on ensuring accurate results. Everything is 
-			  in working order now. Every test I've ever tried 
-			  has came back correctly.
+
 			
 """
 from math import *
