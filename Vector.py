@@ -18,17 +18,6 @@
 """
 from math import *
 
-# This is a simple header thing to print when I'd like to identify
-# the program and such. 
-def print_header():
-	print "\n\n EM Algorithm using the Level Set Method "
-	print "            (Test v 1.0)                 "
-	print "Author:     Timothy Linell Bonnette"
-	print "University: University of Southern Mississippi"
-	print "***********************************************"
-	print "***********************************************"
-	print "\n\n"
-
 # Base Idea taken from http://stackoverflow.com/questions/2401185/python-vector-class
 def AutoFloatProperties(*props):
     '''metaclass'''
@@ -98,12 +87,24 @@ def comp(u,v):
 	bottom = ~v
 	return top/bottom
 
+# Function takes a single vector and returns a normalized vector
+def norm(u):
+	mag = ~u
+	vector = Vector()
+	vector.x = u.x/mag
+	vector.y = u.y/mag
+	if (u.z != 0):
+		vector.z = u.z/mag
+	return vector
+
 if __name__ == '__main__':
 	# Left here to facilitate easy testing.
-	v1 = Vector(5,6,4)
+	v1 = Vector(3,1)
 	v2 = Vector(4,5,3)
 	v3 = Vector(3,4,2)
 	v4 = Vector(2,3,1)
 	result = v1+v2+v3+v4
 	print result.x, result.y, result.z
-	
+	print ~v1
+	result = norm(v1)
+	print result.x, result.y, result.z	

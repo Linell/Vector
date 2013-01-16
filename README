@@ -1,3 +1,33 @@
-This is a simple class designed to be used to represent vectors. It has several functions and operators that help to make this easy for you.
+Linell Bonnette
+www.thelinell.com
+linell@thelinell.com
 
-For more information, see vector_doc.txt. 
+	Vector classes that I was able to find in python online were generally either lacking functionality or simply too complicated. I decided that the simplest way to remedy this situation was to make one myself. With the basic structure, mostly the metaclass, from http://stackoverflow.com/questions/2401185/python-vector-class I was able to make a class to meet all of my needs. I am adding functionality as it is needed.
+
+The purpose of this was to create a three dimensional vector, so that's
+where I've done the majority of the testing. However, it should work for two dimensional vectors too.
+However, operations that require for the vectors to be of the same dimension don't really have
+error checking at the moment. The z component of a two dimensional vector will simply be zero.
+
+Information
+	Declared as simply Vector(x,y,z). The (x,y,z) values are automatically converted to floating point numbers. Here is a list of included operators and what they do:
+Operator                    Function
+_________________________________________________
+   +              Adds the vectors (self, other)
+   -              Subtracts the vectors (self,other)
+   ~              Returns the magnitude (self)
+   *              Returns the dot product (self, other)
+   **             Returns the cross product
+
+Function                     Result
+__________________________________________________
+ proj(u,v)        Returns the projection of u on to v.
+                  In the form of a vector.
+ comp(u,v)        Returns the scalar projection as a 
+                  floating point value.
+ norm(u)	  Returns a normalized vector.
+
+
+To Do:
+	Needs more error handling. For example, checking to make sure vectors are of the same length during
+	operations that require it.
